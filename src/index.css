@@ -1,38 +1,74 @@
+#page{
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
 #title{
   text-align: left;
   float: left;
 }
-#midiimage{
-  width: 100%;
+
+#profileimage{
+  width: 250px;
 }
 
 .header{
-  background: rgb(100, 146, 131);
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  margin-left: -8px;
-  margin-right: -8px;
+  background: rgb(0, 0, 0);
   margin-top: -8px;
   height: 150px;
   text-align: center;
 }
 
+.footer{
+  background: rgb(99, 99, 99);
+  height: 80px;
+  text-align: center;
+  color: white; 
+  margin-top: -24px;
+  position: relative; 
+}
+
 .left {
   float: left;
-  background-color: #111;
 }
 
 .right {
   float: right;
-  background-color: red;
 }
-
 .contentsplit {
   width: 50%;
 }
-
 .contententry {
   width: 100%;
   overflow: auto;
+}
+.centered {
+  text-align: center;
+  position: relative;
+}
+.largetext{
+  font-size: 48px;
+  font-family: roboto;
+}
+.smalltext{
+  font-size: 16px;
+  font-family: roboto;
+  vertical-align: 
+}
+.fillwidth{
+  width: 100%;
+  margin-bottom: -4px;
+}
+.textcentered20 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textcentered40 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
