@@ -3,20 +3,32 @@
   margin-right: -8px;
 }
 
-#title{
-  text-align: left;
-  float: left;
-}
-
 #profileimage{
   width: 250px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#title{
+  position: absolute;
+  top: -10%;
+  left: 12%;
+  font-size: 48px;
+}
+#undertitle{
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  font-size: 18px;
 }
 
 .header{
   background: rgb(0, 0, 0);
   margin-top: -8px;
   height: 150px;
-  text-align: center;
+  position: relative;
+  color: white;
 }
 
 .footer{
@@ -48,12 +60,9 @@
 }
 .largetext{
   font-size: 48px;
-  font-family: roboto;
 }
 .smalltext{
   font-size: 16px;
-  font-family: roboto;
-  vertical-align: 
 }
 .fillwidth{
   width: 100%;
@@ -72,3 +81,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.lightfont {
+  font-family: roboto light;
+}
+
+.normalfont{
+  font-family: roboto;
+}
+
+.mediumfont{
+  font-family: roboto medium;
+}
+

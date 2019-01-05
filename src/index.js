@@ -7,22 +7,24 @@ import treeSrc from './trees_fade.png';
 
 //==================CONTENT============================================
 const introSection = 
-<div class="centered">
+<div className="centered">
     <img src={treeSrc} className = "fillwidth"/>
-    <p className = "largetext textcentered20">Welcome.</p>
+    <p className = "largetext textcentered20 normalfont">Welcome.</p>
 </div>
 
 const midiText = <p>Test</p>;
 const midiImage = <img src={midiSrc} className="fillwidth"/>
 
 const footer = 
-<div class="footer">
-    <p className = "smalltext textcentered40">E-mail me at elias.alesand@gmail.com.</p>
+<div className="footer">
+    <p className = "smalltext textcentered40 normalfont">E-mail me at elias.alesand@gmail.com.</p>
 </div>
 //=================COMPONENTS==========================================
 function Header(){
     return (
         <div className="header">
+            <p id = "title"><span className ="lightfont">Elias</span> <span className = "normalfont">Alesand</span></p>
+            <p id = "undertitle" className ="mediumfont">M.Sc. Student in Information Technology with an AI & Machine Learning profile</p>
             <img src={profileSrc} width="250" id="profileimage"/>
         </div>
     );
@@ -41,7 +43,7 @@ function SingleContentEntry(props){
         <div className = "contententry">{props.content}</div> 
     );
 }
-//=================COMPILING THE FINAL PAGE=============================
+//=================FINAL PAGE========================================
 function Page() {
     return (
         <div id = "page">
