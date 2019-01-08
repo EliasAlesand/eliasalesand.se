@@ -8,37 +8,34 @@ import githubSrc from './github.png';
 import linkedinSrc from './linkedin.png';
 
 //==================CONTENT============================================
-const introSection = 
-<div className="centered">
-    <img src={treeSrc} className = "fillwidth"/>
-    <p className = "largetext textcentered20 normalfont">Welcome.</p>
+const header = 
+<div id="header">
+    <div className = "left center sidemargin" id = "headertext">
+        <p><span className ="lightfont largetext">Elias</span> <span className = "normalfont largetext">Alesand</span></p>
+        <p className ="mediumfont smalltext" id = "subtitle">M.Sc. Student in Information Technology with an AI & Machine Learning profile</p>
+    </div>
+    <div id = "headerlinks" className = "left">
+        <a target="_blank" href="https://www.linkedin.com/in/eliasalesand/">
+            <img src={linkedinSrc} className="headerlink"/>
+        </a>
+        <a target="_blank" href="https://github.com/EliasAlesand">
+            <img src={githubSrc} className="headerlink"/>
+        </a>   
+        <img src={profileSrc} id="profileimage"/> 
+    </div>
 </div>
 
-const midiText = <p>Test</p>;
-const midiImage = <img src={midiSrc} className="fillwidth"/>
+const introSection = 
+<div className="center">
+    <img src={treeSrc} className = "fillwidth"/>
+    <p className = "largetext normalfont" id= "welcometext">Welcome.</p>
+</div>
 
 const footer = 
 <div className="footer">
     <p className = "smalltext textcentered40 normalfont">E-mail me at elias.alesand@gmail.com.</p>
 </div>
 //=================COMPONENTS==========================================
-function Header(){
-    return (
-        <div className="header">
-            <p id = "title"><span className ="lightfont">Elias</span> <span className = "normalfont">Alesand</span></p>
-            <p id = "undertitle" className ="mediumfont">M.Sc. Student in Information Technology with an AI & Machine Learning profile</p>
-            <img src={profileSrc} width="250" id="profileimage"/>
-            <div id = "headerlinks">
-                <a target="_blank" href="https://github.com/EliasAlesand">
-                    <img src={linkedinSrc} className="headerlink"/>
-                </a>
-                <a target="_blank" href="https://github.com/EliasAlesand">
-                    <img src={githubSrc} className="headerlink"/>
-                </a>    
-            </div>
-        </div>
-    );
-}
 function SplitContentEntry(props){
     return (
         <div className = "contententry">
@@ -57,9 +54,8 @@ function SingleContentEntry(props){
 function Page() {
     return (
         <div id = "page">
-            <Header />
+            <SingleContentEntry content={header}/>
             <SingleContentEntry content={introSection}/>
-            <SingleContentEntry content={footer}/>
         </div>
     );
 }

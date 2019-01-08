@@ -1,91 +1,30 @@
 #page{
   margin-left: -8px;
   margin-right: -8px;
+  margin-top: -8px;
+  
+}
+#header{
+  color: white;
+  height: 150px;
+  background: rgb(0, 0, 0);
 }
 #profileimage{
+  position: absolute;
   width: 250px;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#title{
-  position: absolute;
-  top: -10%;
-  left: 12%;
-  font-size: 48px;
-}
-#undertitle{
-  position: absolute;
-  top: 55%;
-  left: 5%;
-  font-size: 18px;
+  left: 960px;
+  top: 0px;
+  transform: translate(-50%, 0%);
 }
 #headerlinks{
-  margin-right: 35%;
-  margin-top: 2.5%;
-  float: right;
+  margin-left: 300px;
 }
-
-.header{
-  background: rgb(0, 0, 0);
-  margin-top: -8px;
-  height: 150px;
-  position: relative;
-  color: white;
-}
-
-.footer{
-  background: rgb(99, 99, 99);
-  height: 80px;
-  text-align: center;
-  color: white; 
-  margin-top: -24px;
-  position: relative; 
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-.contentsplit {
-  width: 50%;
-}
-.contententry {
-  width: 100%;
-  overflow: auto;
-}
-.centered {
-  text-align: center;
-  position: relative;
-}
-.largetext{
-  font-size: 48px;
-}
-.smalltext{
-  font-size: 16px;
-}
-.fillwidth{
-  width: 100%;
-  margin-bottom: -4px;
-}
-.textcentered20 {
+#welcometext {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.textcentered40 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .lightfont {
   font-family: roboto light;
 }
@@ -97,8 +36,77 @@
 .mediumfont{
   font-family: roboto medium;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 
+.largetext{
+  font-size: 48px;
+}
+.smalltext{
+  font-size: 18px;
+}
+.center {
+  text-align: center;
+}
+
+.sidemargin{
+  margin-left: 128px;
+  margin-right: 128px;
+}
 .headerlink{
+  margin-top: 75px;
   width: 55px;
   margin-right: 10px;
+  transform: translate(0%, -50%);
+}
+.fillwidth{
+  width: 100%;
+}
+/*=====Responsive design======*/
+@media screen and (max-width: 1325px) { 
+  #headerlinks {margin-left: 400px;}  
+  .headerlink { margin-top: 20px;}
+  #header{height: 218px;}
+}
+@media screen and (max-width: 1100px) { 
+  #profileimage { display: none; }
+  #headertext{position: absolute;left:50%;transform: translate(-50%, 0%);width: 100%;margin-left: 0px; margin-right: 0px;}
+  #headerlinks{position: absolute; margin-top: 160px; left:50%; margin-left: 0px;transform: translate(-50%, 0%);}
+}
+@media screen and (max-width: 335px) { 
+  .sidemargin { margin-left: 28px; margin-right: 28px; }  
+  #header{height: 150px;}
+  #headerlinks{margin-top: 90px}
+  #subtitle{display: none;}
+}
+
+/*=========================================================*/
+
+
+
+.footer{
+  background: rgb(99, 99, 99);
+  height: 80px;
+  text-align: center;
+  color: white; 
+  margin-top: -24px;
+  position: relative; 
+}
+
+.contentsplit {
+  width: 50%;
+}
+.contententry {
+  width: 100%;
+  overflow: auto;
+}
+.textcentered40 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
