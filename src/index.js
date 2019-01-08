@@ -4,6 +4,8 @@ import './index.css';
 import profileSrc from './profile.png';
 import midiSrc from './midi.png';
 import treeSrc from './trees_fade.png';
+import githubSrc from './github.png';
+import linkedinSrc from './linkedin.png';
 
 //==================CONTENT============================================
 const introSection = 
@@ -26,6 +28,14 @@ function Header(){
             <p id = "title"><span className ="lightfont">Elias</span> <span className = "normalfont">Alesand</span></p>
             <p id = "undertitle" className ="mediumfont">M.Sc. Student in Information Technology with an AI & Machine Learning profile</p>
             <img src={profileSrc} width="250" id="profileimage"/>
+            <div id = "headerlinks">
+                <a target="_blank" href="https://github.com/EliasAlesand">
+                    <img src={linkedinSrc} className="headerlink"/>
+                </a>
+                <a target="_blank" href="https://github.com/EliasAlesand">
+                    <img src={githubSrc} className="headerlink"/>
+                </a>    
+            </div>
         </div>
     );
 }
