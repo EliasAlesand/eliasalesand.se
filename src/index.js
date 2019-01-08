@@ -28,7 +28,7 @@ const header =
 const introSection = 
 <div className="center">
     <img src={treeSrc} className = "fillwidth"/>
-    <p className = "largetext normalfont" id= "welcometext">Welcome.</p>
+    <p className = "largetext normalfont" id= "welcometext">Welcome</p>
 </div>
 
 const footer = 
@@ -56,6 +56,7 @@ function Page() {
         <div id = "page">
             <SingleContentEntry content={header}/>
             <SingleContentEntry content={introSection}/>
+            <SingleContentEntry content={footer}/>
         </div>
     );
 }
