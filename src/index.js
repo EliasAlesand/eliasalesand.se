@@ -26,9 +26,12 @@ const header =
 </div>
 
 const introSection = 
-<div className="center">
+<div className="center" id = "introsection">
     <img src={treeSrc} className = "fillwidth"/>
-    <p className = "largetext normalfont" id= "welcometext">Welcome</p>
+    <div id = "welcometext">
+        <p className = "largertext fancyfont">Hello</p>
+        <p className = "mediumtext fancyfont">My name is Elias. I am studying my fifth year at Linköping University. Here you can find things i have been working on the past few years. </p>
+    </div>  
 </div>
 
 const footer = 
