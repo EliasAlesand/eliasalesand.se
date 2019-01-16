@@ -2,7 +2,6 @@
   margin-left: -8px;
   margin-right: -8px;
   margin-top: -8px;
-  
 }
 #header{
   color: white;
@@ -21,14 +20,19 @@
 }
 #welcometext {
   position: absolute;
-  top: 315px;
+  top: 460px;
   left: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
   pointer-events:none;
+  height: 500px;
 }
 #introsection {
   margin-top: 300px;
+}
+.blackbar{
+  height: 4px;
+  background-color: black;
 }
 .lightfont {
   font-family: roboto light;
@@ -73,7 +77,7 @@
 }
 .headerlink{
   margin-top: 75px;
-  width: 55px;
+  height: 55px;
   margin-right: 15px;
   transform: translate(0%, -50%);
   
@@ -91,6 +95,76 @@
   margin-top: -24px;
   position: relative;
 }
+.contententry {
+  width: 100%;
+  overflow: auto;
+}
+.footertext {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contentsplit {
+  width: 50%;
+}
+/*=========Showcase=========*/
+
+.showcase {
+  position: relative;
+  margin: auto;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: -4px;
+}
+.slide {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -133px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(25, 25, 25, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 /*=====Responsive design======*/
 @media screen and (max-width: 1355px) { 
   #headerlinks {margin-left: 400px;}  
@@ -102,30 +176,12 @@
   #headertext{position: absolute;left:50%;transform: translate(-50%, 0%);width: 95%;margin-left: 0px; margin-right: 0px;}
   #headerlinks{position: absolute; margin-top: 160px; left:50%; margin-left: 0px;transform: translate(-50%, 0%);}
 }
+@media screen and (max-width: 575px) { 
+  #resumeref{display: none;}
+}
 @media screen and (max-width: 335px) { 
   .sidemargin { margin-left: 28px; margin-right: 28px; }  
   #header{height: 150px;}
   #headerlinks{margin-top: 90px}
   #subtitle{display: none;}
-}
-
-/*=========================================================*/
-
-
-
-
-
-.contentsplit {
-  width: 50%;
-}
-.contententry {
-  width: 100%;
-  overflow: auto;
-  margin-bottom: 
-}
-.textcentered40 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
