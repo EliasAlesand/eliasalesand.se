@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import profileSrc from './profile.png';
-import midiSrc from './midi.png';
 import treeSrc from './trees_fade_cut.png';
 import githubSrc from './github.png';
 import linkedinSrc from './linkedin.png';
 import resumeSrc from './resume.png';
 import kandidatSrc from './kandidat.png';
+import midiSrc from './midi.png';
+import midi2Src from './midi2.png';
 
 
-document.title = "Elias Alesand | Work In Progress";
+document.title = "Elias Alesand | Welcome";
 //==================CONTENT============================================
 const header = 
 <div id="header">
@@ -40,7 +41,7 @@ const introSection =
         <p className = "mediumtext fancyfont">My name is Elias. I am studying my fifth year at Linköping University. Here you will find things i have been doing the past few years. </p>
         <p className = "mediumtext fancyfont" id ="resumeref">For academic details and work experience, please see my resume among the links above.</p>    
     </div>
-    <div class = "blackbar"></div>
+    <div className = "blackbar"></div>
 </div>
 
 const footer = 
@@ -53,7 +54,7 @@ class Showcase extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            slideIndex: 2
+            slideIndex: 1
         }
     }
     plusSlides(n) {
@@ -70,15 +71,36 @@ class Showcase extends React.Component {
             <div className = "contententry">
                 <div className="showcase">
                     <div className="slide fade"style={{display: this.state.slideIndex ==1 ? 'block' : 'none' }}>
-                        <img className = "fillwidth" src={kandidatSrc}/>
+                        <img className = "showcaseimage" src={midi2Src}/>
+                        <p className = " largertext fancyfont showcasetitle">MIDI-lights</p>
+                        <div className = "showcasetext">
+                            <hr></hr>
+                            <p className = "mediumtext lightfont">
+                                In an attempt to make learning to play the piano more fun I created a small Python program that visualizes notes from MIDI 
+                                files on an addressable LED strip connected to a Raspberry Pi.
+                                Read more about it <a target = "_blank"href="https://github.com/EliasAlesand/MIDI-lights">here</a>.
+                            </p>
+                            <hr></hr>
+                        </div>
+                        
                     </div>
                     <div className="slide fade"style={{display: this.state.slideIndex ==2 ? 'block' : 'none' }}>
-                        <img className = "fillwidth" src={treeSrc}/>
+                        <img className = "showcaseimage" src={kandidatSrc}/>
+                        <p className = "largertext fancyfont showcasetitle">Graphical Password</p>
+                        <div className = "showcasetext">
+                            <hr></hr>
+                            <p className = " mediumtext lightfont">
+                            As my bachelor’s thesis me and another student developed a graphical password
+                            system for Android designed to be resistant to third parties watching users log in.
+                            You can find the thesis <a target = "_blank"href="https://liu.diva-portal.org/smash/record.jsf?c=1&pid=diva2%3A1108259">here</a>.
+                            </p>
+                            <hr></hr>
+                        </div>
                     </div>
                     <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
                     <a className="next" onClick={() => this.plusSlides(1)}>&#10095;</a>
                 </div>
-                <div class = "blackbar"></div>
+                <div className = "blackbar"></div>
             </div> 
         );
     }

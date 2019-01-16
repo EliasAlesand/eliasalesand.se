@@ -1,7 +1,5 @@
-#page{
-  margin-left: -8px;
-  margin-right: -8px;
-  margin-top: -8px;
+body{
+  margin: 0;
 }
 #header{
   color: white;
@@ -156,6 +154,30 @@
   animation-duration: 1.5s;
 }
 
+.showcasetext{
+  position: absolute;
+  color: white;
+  left: 50px;
+  top: 105px;
+  width: 450px;
+}
+.showcasetitle{
+  position: absolute;
+  color: white;
+  left: 50px;
+  top: -30px;
+}
+
+a:link {
+  color: red; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+a:visited {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -166,7 +188,7 @@
 }
 
 /*=====Responsive design======*/
-@media screen and (max-width: 1355px) { 
+@media screen and (max-width: 1405px) { 
   #headerlinks {margin-left: 400px;}  
   .headerlink { margin-top: 20px;}
   #header{height: 218px;}
@@ -176,7 +198,7 @@
   #headertext{position: absolute;left:50%;transform: translate(-50%, 0%);width: 95%;margin-left: 0px; margin-right: 0px;}
   #headerlinks{position: absolute; margin-top: 160px; left:50%; margin-left: 0px;transform: translate(-50%, 0%);}
 }
-@media screen and (max-width: 575px) { 
+@media screen and (max-width: 592px) { 
   #resumeref{display: none;}
 }
 @media screen and (max-width: 335px) { 
