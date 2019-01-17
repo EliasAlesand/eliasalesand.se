@@ -87,7 +87,7 @@ class Showcase extends React.Component {
                     </div>
                     <div className="slide fade"style={{display: this.state.slideIndex ==3 ? 'block' : 'none' }}>
                         <img className = "showcaseimage" src={kandidatSrc}/>
-                        <p className = "largertext fancyfont showcasetitle">Graphical Password</p>
+                        <p className = "largertext fancyfont showcasetitle">Bachelor’s Thesis</p>
                         <div className = "showcasetext">
                             <hr></hr>
                             <p className = " mediumtext lightfont">
