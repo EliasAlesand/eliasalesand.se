@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import profileSrc from './profile.png';
-import treeSrc from './trees_fade_cut.png';
+import treeSrc from './trees.png';
 import githubSrc from './github.png';
 import linkedinSrc from './linkedin.png';
 import resumeSrc from './resume.png';
 import kandidatSrc from './kandidat.png';
 import midiSrc from './midi.png';
-import midi2Src from './midi2.png';
+import piSrc from './pi.png';
 
 
 document.title = "Elias Alesand | Welcome";
@@ -38,7 +38,7 @@ const introSection =
     <img src={treeSrc} className = "fillwidth"/>
     <div id = "welcometext">
         <p className = "largertext fancyfont">Hello</p>
-        <p className = "mediumtext fancyfont">My name is Elias. I am studying my fifth year at Linköping University. Here you will find things i have been doing the past few years. </p>
+        <p className = "mediumtext fancyfont">My name is Elias. I am studying my fifth year at Linköping University. Here you will find some of the things that i have been working on the past few years. </p>
         <p className = "mediumtext fancyfont" id ="resumeref">For academic details and work experience, please see my resume among the links above.</p>    
     </div>
     <div className = "blackbar"></div>
@@ -61,7 +61,7 @@ class Showcase extends React.Component {
         this.showSlides(this.state.slideIndex + n);
     }
     showSlides(n) {
-        var nslides = 2
+        var nslides = 3
         this.setState({slideIndex:n})
         if (n > nslides) {this.setState({slideIndex:1})} 
         if (n < 1) {this.setState({slideIndex:nslides})}
@@ -70,8 +70,8 @@ class Showcase extends React.Component {
         return (
             <div className = "contententry">
                 <div className="showcase">
-                    <div className="slide fade"style={{display: this.state.slideIndex ==1 ? 'block' : 'none' }}>
-                        <img className = "showcaseimage" src={midi2Src}/>
+                    <div className="slide fade"style={{display: this.state.slideIndex ==2 ? 'block' : 'none' }}>
+                        <img className = "showcaseimage" src={midiSrc}/>
                         <p className = " largertext fancyfont showcasetitle">MIDI-lights</p>
                         <div className = "showcasetext">
                             <hr></hr>
@@ -81,10 +81,11 @@ class Showcase extends React.Component {
                                 Read more about it <a target = "_blank"href="https://github.com/EliasAlesand/MIDI-lights">here</a>.
                             </p>
                             <hr></hr>
+                            <p className = "smalltext mediumfont">Python, Raspberry Pi, Hardware</p>
                         </div>
                         
                     </div>
-                    <div className="slide fade"style={{display: this.state.slideIndex ==2 ? 'block' : 'none' }}>
+                    <div className="slide fade"style={{display: this.state.slideIndex ==3 ? 'block' : 'none' }}>
                         <img className = "showcaseimage" src={kandidatSrc}/>
                         <p className = "largertext fancyfont showcasetitle">Graphical Password</p>
                         <div className = "showcasetext">
@@ -95,6 +96,21 @@ class Showcase extends React.Component {
                             You can find the thesis <a target = "_blank"href="https://liu.diva-portal.org/smash/record.jsf?c=1&pid=diva2%3A1108259">here</a>.
                             </p>
                             <hr></hr>
+                            <p className = "smalltext mediumfont">Bachelor's thesis, Android, Security, UX</p>
+                        </div>
+                    </div>
+                    <div className="slide fade"style={{display: this.state.slideIndex ==1 ? 'block' : 'none' }}>
+                        <img className = "showcaseimage" src={piSrc}/>
+                        <p className = "largertext fancyfont showcasetitle">eliasalesand.se</p>
+                        <div className = "showcasetext">
+                            <hr></hr>
+                            <p className = " mediumtext lightfont">
+                            I wanted to create a personal website where i control as much of it as possible.
+                            This website was created with ReactJS and is hosted from a Raspberry Pi in my home.
+                            Source code can be found <a target = "_blank"href="https://github.com/EliasAlesand/eliasalesand.se">here</a>.
+                            </p>
+                            <hr></hr>
+                            <p className = "smalltext mediumfont">ReactJS, Web Hosting, Web Design, Let's Encrypt</p>
                         </div>
                     </div>
                     <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
@@ -106,7 +122,7 @@ class Showcase extends React.Component {
     }
 }
 
-function SingleContentEntry(props){
+function StaticContent(props){
     return (
         <div className = "contententry">{props.content}</div> 
     );
@@ -115,10 +131,10 @@ function SingleContentEntry(props){
 function Page() {
     return (
         <div id = "page">
-            <SingleContentEntry content={header}/>
-            <SingleContentEntry content={introSection}/>
+            <StaticContent content={header}/>
+            <StaticContent content={introSection}/>
             <Showcase/>
-            <SingleContentEntry content={footer}/>
+            <StaticContent content={footer}/>
             
         </div>
     );

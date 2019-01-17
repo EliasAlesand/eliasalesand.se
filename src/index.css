@@ -86,7 +86,7 @@ body{
 }
 
 .footer{
-  background: rgb(99, 99, 99);
+  background: rgb(30, 30, 30);
   height: 80px;
   text-align: center;
   color: white; 
@@ -113,7 +113,7 @@ body{
   margin: auto;
   height: 500px;
   overflow: hidden;
-  margin-bottom: -4px;
+  background-color: black;
 }
 .slide {
   display: none;
@@ -200,6 +200,20 @@ a:visited {
 }
 @media screen and (max-width: 592px) { 
   #resumeref{display: none;}
+}
+@media screen and (max-width: 534px) { 
+  .showcaseimage {margin-left: -200px}
+  .largertext{font-size: 41px;}
+  .largetext{font-size: 32px;}
+  .mediumtext{font-size: 18px;}
+  .smalltext{font-size: 12px;}
+  #introsection {margin-top: 150px;}
+  #headerlinks{margin-top: 120px; margin-right: 0px;}
+  #header{height: 190px;}
+  #welcometext {top: 410px;}
+  .showcasetext{width: 70%;}
+  .showcasetext{top: 75px;}
+  .showcasetitle{left: 50%;width:319px;transform: translate(-50%, 0%);}
 }
 @media screen and (max-width: 335px) { 
   .sidemargin { margin-left: 28px; margin-right: 28px; }  
