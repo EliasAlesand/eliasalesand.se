@@ -57,18 +57,21 @@ class Showcase extends React.Component {
             slideIndex: 1
         }
     }
-    plusSlides(n) {
-        this.showSlides(this.state.slideIndex + n);
+    shuffleSlide(n) {
+        this.showSlide(this.state.slideIndex + n);
     }
-    showSlides(n) {
+    showSlide(n) {
         var nslides = 3
         this.setState({slideIndex:n})
         if (n > nslides) {this.setState({slideIndex:1})} 
         if (n < 1) {this.setState({slideIndex:nslides})}
     }
+    getDotActive(n){
+        return this.state.slideIndex == n ? 'active' : '';
+    }
     render(){
         return (
-            <div className = "contententry">
+            <div className = "contententry ">
                 <div className="showcase">
                     <div className="slide fade"style={{display: this.state.slideIndex ==2 ? 'block' : 'none' }}>
                         <img className = "showcaseimage" src={midiSrc}/>
@@ -113,11 +116,17 @@ class Showcase extends React.Component {
                             <p className = "smalltext mediumfont">ReactJS, Web Hosting, Web Design, Let's Encrypt</p>
                         </div>
                     </div>
-                    <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
-                    <a className="next" onClick={() => this.plusSlides(1)}>&#10095;</a>
+                    <a className="prev" onClick={() => this.shuffleSlide(-1)}>&#10094;</a>
+                    <a className="next" onClick={() => this.shuffleSlide(1)}>&#10095;</a>
+
+                    <div id="dots">
+                        <span className={'dot ' + this.getDotActive(1)} onClick={() => this.showSlide(1)}></span> 
+                        <span className={'dot ' + this.getDotActive(2)} onClick={() => this.showSlide(2)}></span> 
+                        <span className={'dot ' + this.getDotActive(3)} onClick={() => this.showSlide(3)}></span> 
+                    </div>
                 </div>
                 <div className = "blackbar"></div>
-            </div> 
+            </div>
         );
     }
 }
